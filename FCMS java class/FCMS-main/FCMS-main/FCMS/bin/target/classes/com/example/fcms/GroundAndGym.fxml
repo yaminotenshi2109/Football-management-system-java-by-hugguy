@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fcms.GroundAndGym">
+    <center>
+        <AnchorPane fx:id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="849.0" prefWidth="1124.0" style="-fx-background-color: linear-gradient(to right bottom,#ffa6a6, #ffeded);" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="LogoutButton" layoutX="1049.0" layoutY="801.0" mnemonicParsing="false" onAction="#UserLogoutMethod" stylesheets="@../../../css/mystylesheet.css" text="Logout" />
+                <Label layoutX="17.0" text="Ground and Gym">
+                    <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="58.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="Ground_Type" layoutX="362.0" layoutY="470.0" prefHeight="28.0" prefWidth="155.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+                <TableView fx:id="GROUNDTABLE" layoutX="99.0" layoutY="166.0" prefHeight="266.0" prefWidth="904.0">
+                    <columns>
+                        <TableColumn fx:id="GG_No" prefWidth="94.0" text="No." />
+                        <TableColumn fx:id="GG_Name" prefWidth="88.0" text="Name" />
+                        <TableColumn fx:id="GG_Type" prefWidth="134.0" text="Type" />
+                        <TableColumn fx:id="GG_Description" prefWidth="164.0" text="Description" />
+                        <TableColumn fx:id="GG_Capacity" prefWidth="176.0" text="Capacity" />
+                        <TableColumn fx:id="S_ID" minWidth="0.0" prefWidth="247.0" text="ManagingStaff ID" />
+                    </columns>
+                </TableView>
+                <Label layoutX="46.0" layoutY="471.0" text="No:">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="Ground_Name" layoutX="107.0" layoutY="519.0" prefHeight="28.0" prefWidth="154.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+                <Label layoutX="46.0" layoutY="523.0" text="Name: ">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="516.0" layoutY="473.0">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="46.0" layoutY="570.0" text="Description: ">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="37.0" layoutY="327.0" />
+                <Label layoutX="283.0" layoutY="473.0" text="Type: ">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="283.0" layoutY="523.0" text="Capacity: ">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="528.0" layoutY="473.0" text="Managing Staff Name: ">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="Ground_SiD" layoutX="690.0" layoutY="470.0" prefHeight="28.0" prefWidth="102.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+                <TextField fx:id="Ground_Capacity" layoutX="362.0" layoutY="519.0" prefHeight="28.0" prefWidth="155.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+                <TextField fx:id="Ground_Des" layoutX="145.0" layoutY="566.0" prefHeight="28.0" prefWidth="385.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+                <Label fx:id="GroundNo" layoutX="107.0" layoutY="470.0">
+                    <font>
+                        <Font name="Bell MT" size="16.0" />
+                    </font>
+                </Label>
+            <Button fx:id="Insert" layoutX="44.0" layoutY="631.0" mnemonicParsing="false" onAction="#insertIntoTable" stylesheets="@../../../css/mystylesheet.css" text="Insert" />
+            <Button fx:id="Insert1" layoutX="121.0" layoutY="631.0" mnemonicParsing="false" onAction="#clearAllfields" stylesheets="@../../../css/mystylesheet.css" text="Clear" />
+            </children>
+        </AnchorPane>
+    </center>
+    <left>
+        <VBox prefHeight="854.0" prefWidth="258.0" style="-fx-background-color: #000;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="280.0" fitWidth="287.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../img/barca.gif" />
+                    </image>
+                </ImageView>
+                <Button fx:id="PlayersButton" mnemonicParsing="false" onAction="#PlayerMethod" prefHeight="37.0" prefWidth="285.0" styleClass="menubutton" stylesheets="@../../../css/mystylesheet.css" text="Players" textFill="#ebe2ce">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Button fx:id="CoachButton" mnemonicParsing="false" onAction="#CoachMethod" prefHeight="37.0" prefWidth="285.0" styleClass="menubutton" stylesheets="@../../../css/mystylesheet.css" text="Coach" textFill="#ebe2ce">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Button fx:id="TransferWindowButton" mnemonicParsing="false" onAction="#TransferWindowMethod" prefHeight="37.0" prefWidth="285.0" styleClass="menubutton" stylesheets="@../../../css/mystylesheet.css" text="Transfer Window" textFill="#ebe2ce">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Button fx:id="StaffButton" mnemonicParsing="false" onAction="#StaffMethod" prefHeight="37.0" prefWidth="285.0" styleClass="menubutton" stylesheets="@../../../css/mystylesheet.css" text="Staff" textFill="#ebe2ce">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#GroundandGymMethod" prefHeight="37.0" prefWidth="285.0" styleClass="menubutton" stylesheets="@../../../css/mystylesheet.css" text="Ground And Gym" textFill="#ebe2ce">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#TournamentMethod" prefHeight="37.0" prefWidth="285.0" styleClass="menubutton" stylesheets="@../../../css/mystylesheet.css" text="Tournament" textFill="#ebe2ce">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#DevelopedByMethod" prefHeight="37.0" prefWidth="285.0" styleClass="menubutton" stylesheets="@../../../css/mystylesheet.css" text="Developed By" textFill="#ebe2ce">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+    </left>
+</BorderPane>

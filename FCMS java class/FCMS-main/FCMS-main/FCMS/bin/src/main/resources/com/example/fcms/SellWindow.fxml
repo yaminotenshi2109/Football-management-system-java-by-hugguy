@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fcms.SellWindow">
+    <center>
+        <AnchorPane fx:id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="849.0" prefWidth="1124.0" style="-fx-background-color: linear-gradient(to right bottom,#ffa6a6, #ffeded);" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="LogoutButton" layoutX="1049.0" layoutY="801.0" mnemonicParsing="false" onAction="#UserLogoutMethod" stylesheets="@../../../css/mystylesheet.css" text="Logout" />
+                <Label layoutX="17.0" text="Sell Window">
+                    <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="58.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="Id" layoutX="135.0" layoutY="233.0" prefHeight="28.0" prefWidth="154.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+                <TextField fx:id="Age" layoutX="134.0" layoutY="322.0" prefHeight="28.0" prefWidth="155.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+                <TableView fx:id="SELLTABLE" layoutX="322.0" layoutY="202.0" prefHeight="334.0" prefWidth="720.0">
+                    <columns>
+                        <TableColumn fx:id="Sell_ID" prefWidth="45.0" text="ID" />
+                        <TableColumn fx:id="Sell_NAME" prefWidth="59.0" text="Name" />
+                        <TableColumn fx:id="Sell_AGE" prefWidth="58.0" text="Age" />
+                        <TableColumn fx:id="Sell_NATIONALITY" prefWidth="85.0" text="Nationality" />
+                        <TableColumn fx:id="Sell_POSITION" prefWidth="66.0" text="Position" />
+                        <TableColumn fx:id="Sell_MVA" prefWidth="110.0" text="Market Value" />
+                        <TableColumn fx:id="Sell_CAPS" prefWidth="75.0" text="Caps" />
+                        <TableColumn fx:id="Sell_GOALS" prefWidth="89.0" text="Goals" />
+                        <TableColumn fx:id="Sell_TRANSFERFEE" prefWidth="132.0" text="Transfer Fee" />
+                    </columns>
+                </TableView>
+                <Button layoutX="295.0" layoutY="743.0" mnemonicParsing="false" onAction="#TransferWindowMethod" stylesheets="@../../../css/mystylesheet.css" text="BUY PLAYER" />
+                <Button layoutX="428.0" layoutY="743.0" mnemonicParsing="false" stylesheets="@../../../css/mystylesheet.css" text="SELL PLAYER" />
+                <Label layoutX="87.0" layoutY="236.0" text="ID:">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="33.0" layoutY="614.0" text="Transfer Fee: ">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="Transfer_Fee" layoutX="140.0" layoutY="611.0" prefHeight="28.0" prefWidth="155.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+                <Button layoutX="900.0" layoutY="743.0" mnemonicParsing="false" onAction="#SellPlayer" stylesheets="@../../../css/mystylesheet.css" text="CONFIRM" />
+                <TextField fx:id="Name" layoutX="135.0" layoutY="281.0" prefHeight="28.0" prefWidth="154.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+                <Label layoutX="61.0" layoutY="284.0" text=" Name:">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="52.0" layoutY="428.0" text="Position:">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="37.0" layoutY="327.0" />
+                <Label layoutX="80.0" layoutY="325.0" text="Age:">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="17.0" layoutY="473.0" text="Market Value: ">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="75.0" layoutY="517.0" text="Caps: ">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="73.0" layoutY="561.0" text="Goals: ">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="Goals" layoutX="140.0" layoutY="558.0" prefHeight="28.0" prefWidth="155.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+                <TextField fx:id="Caps" layoutX="140.0" layoutY="514.0" prefHeight="28.0" prefWidth="155.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+                <TextField fx:id="Market_Value" layoutX="140.0" layoutY="470.0" prefHeight="28.0" prefWidth="155.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+                <TextField fx:id="Position" layoutX="140.0" layoutY="425.0" prefHeight="28.0" prefWidth="155.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+                <Label layoutX="30.0" layoutY="377.0" text="Nationality: ">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="Nationality" layoutX="135.0" layoutY="374.0" prefHeight="28.0" prefWidth="155.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+            <ComboBox fx:id="firstcombo1" layoutX="418.0" layoutY="84.0" prefWidth="150.0" promptText="Search By" />
+            <TextField fx:id="Id1" layoutX="579.0" layoutY="83.0" prefHeight="28.0" prefWidth="84.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+            <ComboBox fx:id="RelationCombo1" layoutX="674.0" layoutY="84.0" prefHeight="26.0" prefWidth="89.0" />
+            <TextField fx:id="firsttf_1" layoutX="778.0" layoutY="83.0" prefHeight="28.0" prefWidth="84.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="firsttf_2" layoutX="874.0" layoutY="83.0" prefHeight="28.0" prefWidth="84.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button layoutX="970.0" layoutY="83.0" mnemonicParsing="false" onAction="#Search" stylesheets="@../../../css/mystylesheet.css" text="Ok" />
+            <Button layoutX="872.0" layoutY="165.0" mnemonicParsing="false" onAction="#refreshTable" stylesheets="@../../../css/mystylesheet.css" text="Refresh" />
+            </children>
+        </AnchorPane>
+    </center>
+    <left>
+        <VBox prefHeight="854.0" prefWidth="258.0" style="-fx-background-color: #000;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="280.0" fitWidth="287.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../img/barca.gif" />
+                    </image>
+                </ImageView>
+                <Button fx:id="PlayersButton" mnemonicParsing="false" onAction="#PlayerMethod" prefHeight="37.0" prefWidth="285.0" styleClass="menubutton" stylesheets="@../../../css/mystylesheet.css" text="Players" textFill="#ebe2ce">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Button fx:id="CoachButton" mnemonicParsing="false" onAction="#CoachMethod" prefHeight="37.0" prefWidth="285.0" styleClass="menubutton" stylesheets="@../../../css/mystylesheet.css" text="Coach" textFill="#ebe2ce">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Button fx:id="TransferWindowButton" mnemonicParsing="false" onAction="#TransferWindowMethod" prefHeight="37.0" prefWidth="285.0" styleClass="menubutton" stylesheets="@../../../css/mystylesheet.css" text="Transfer Window" textFill="#ebe2ce">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Button fx:id="StaffButton" mnemonicParsing="false" onAction="#StaffMethod" prefHeight="37.0" prefWidth="285.0" styleClass="menubutton" stylesheets="@../../../css/mystylesheet.css" text="Staff" textFill="#ebe2ce">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#GroundandGymMethod" prefHeight="37.0" prefWidth="285.0" styleClass="menubutton" stylesheets="@../../../css/mystylesheet.css" text="Ground And Gym" textFill="#ebe2ce">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#TournamentMethod" prefHeight="37.0" prefWidth="285.0" styleClass="menubutton" stylesheets="@../../../css/mystylesheet.css" text="Tournament" textFill="#ebe2ce">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="285.0" styleClass="menubutton" stylesheets="@../../../css/mystylesheet.css" text="Developed By" textFill="#ebe2ce">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+    </left>
+</BorderPane>
